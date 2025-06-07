@@ -2,6 +2,8 @@
 
 This project is a web application that displays TradingView lightweight charts with real-time stock data fetched from Yahoo Finance. The application features an interactive UI built with Flask, SQLAlchemy, and Tailwind CSS with DaisyUI components. Users can view and analyze stock data using technical indicators, manage a watchlist of symbols, and toggle between light and dark themes.
 
+**Note: This is a Python Flask application that does NOT use Node.js or npm. All dependencies are managed through pip and requirements.txt.**
+
 ## Features
 
 ### Chart Analysis
@@ -28,6 +30,7 @@ Follow these steps to set up and run the application:
 ### Prerequisites
 
 - Python 3.x
+- **Note: Node.js and npm are NOT required for this project**
 
 ### Steps
 
@@ -52,7 +55,7 @@ Follow these steps to set up and run the application:
    source venv/bin/activate
    ```
 
-3. **Install the dependencies:**
+3. **Install the Python dependencies:**
 
    ```sh
    pip install -r requirements.txt
@@ -70,6 +73,13 @@ Follow these steps to set up and run the application:
    http://127.0.0.1:5000
    ```
 
+## Important Notes
+
+- **This is a Python Flask application** - do not run npm commands
+- **No package.json file is needed** - all dependencies are in requirements.txt
+- **No build step is required** - the application runs directly with Python
+- All frontend assets (CSS/JS) are served directly by Flask
+
 ## Project Structure
 
 ```
@@ -80,6 +90,7 @@ Follow these steps to set up and run the application:
 │   └── index.html         # Main HTML template
 ├── static/
 │   └── main.js            # JavaScript for chart handling and UI
+├── requirements.txt       # Python dependencies (NOT package.json)
 ├── .gitignore             # Git ignore file
 └── README.md              # Project documentation
 ```
@@ -88,8 +99,9 @@ Follow these steps to set up and run the application:
 
 - **Backend**: Flask, SQLAlchemy, SQLite
 - **Data**: Yahoo Finance API (via yfinance)
-- **Frontend**: JavaScript, Tailwind CSS, DaisyUI
-- **Charting**: Lightweight-charts.js
+- **Frontend**: JavaScript, Tailwind CSS, DaisyUI (served via CDN)
+- **Charting**: Lightweight-charts.js (served via CDN)
+- **Language**: Python (NOT Node.js)
 
 ## License
 
